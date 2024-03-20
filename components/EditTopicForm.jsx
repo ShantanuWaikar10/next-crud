@@ -14,7 +14,7 @@ const EditTopicForm = ({ id, title, description }) => {
     e.preventDefault();
 
     try {
-      const res = await fetch(`http://localhost:3000/api/topics/${id}`, {
+      const res = await fetch(`https://next-crud-tau-one.vercel.app/api/topics/${id}`, {
         method: "PUT",
         "Content-Type": "application/json",
         body: JSON.stringify({ newTitle, newDescription }),
